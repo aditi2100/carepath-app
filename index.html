@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="CarePath is a safety-first, non-diagnostic care and health-resource navigator." />
+    <title>CarePath — Find your next safe step</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="#"><span class="brand-mark">+</span><span>care<span>path</span></span></a>
+      <div class="topbar-note"><span class="pulse"></span> Safety-first guidance</div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">A calmer way forward</p>
+          <h1>Find your next <em>safe</em> step.</h1>
+          <p class="lede">CarePath helps you organize what you’re experiencing, understand urgency signals, and find practical care options. It never diagnoses.</p>
+          <div class="trust-row"><span>✓ No diagnosis</span><span>✓ Explainable guidance</span><span>✓ Your data stays in your browser</span></div>
+        </div>
+        <div class="hero-card">
+          <div class="mini-label">How it works</div>
+          <div class="step"><b>01</b><span>Share symptoms and constraints</span></div>
+          <div class="step"><b>02</b><span>Review urgency signals</span></div>
+          <div class="step"><b>03</b><span>Choose an actionable next step</span></div>
+        </div>
+      </section>
+
+      <section class="workspace">
+        <div class="panel intake-panel">
+          <div class="panel-heading"><div><p class="eyebrow">Step 01</p><h2>Tell us what’s going on</h2></div><button id="sampleButton" class="ghost-button">Load sample case</button></div>
+          <form id="careForm">
+            <label>What are you noticing? <span class="muted">Select all that apply</span></label>
+            <div class="chip-grid" id="symptomChips">
+              <button type="button" class="chip" data-value="fever">Fever or chills</button>
+              <button type="button" class="chip" data-value="breathing">Breathing difficulty</button>
+              <button type="button" class="chip" data-value="pain">Significant pain</button>
+              <button type="button" class="chip" data-value="dehydration">Unable to keep fluids down</button>
+              <button type="button" class="chip" data-value="rash">New rash or swelling</button>
+              <button type="button" class="chip" data-value="fatigue">Unusual fatigue</button>
+              <button type="button" class="chip" data-value="cough">Cough or congestion</button>
+              <button type="button" class="chip" data-value="other">Something else</button>
+            </div>
+            <div class="form-grid">
+              <div><label for="duration">How long has it been happening?</label><select id="duration"><option value="today">Today</option><option value="days">A few days</option><option value="week">About a week</option><option value="longer">Longer than a week</option></select></div>
+              <div><label for="age">Age range</label><select id="age"><option value="adult">18–64</option><option value="young">Under 18</option><option value="older">65+</option></select></div>
+            </div>
+            <label>What might make care harder today? <span class="muted">Optional</span></label>
+            <div class="constraint-row"><label class="check"><input type="checkbox" value="cost" /> Cost concerns</label><label class="check"><input type="checkbox" value="transport" /> Transportation</label><label class="check"><input type="checkbox" value="language" /> Language access</label><label class="check"><input type="checkbox" value="privacy" /> Privacy</label></div>
+            <button class="primary-button" type="submit">Build my care path <span>→</span></button>
+          </form>
+        </div>
+
+        <div class="panel result-panel" id="resultPanel">
+          <div class="empty-state" id="emptyState"><div class="empty-icon">✦</div><h2>Your care path will appear here</h2><p>Start with a few signals on the left. We’ll show what deserves attention, what you can do now, and where to look for care.</p></div>
+          <div id="results" class="hidden"></div>
+        </div>
+      </section>
+
+      <section class="principles">
+        <div><p class="eyebrow">Designed with care</p><h2>Useful without pretending to know everything.</h2></div>
+        <div class="principle-grid"><article><span>01</span><h3>Safety gates</h3><p>Potential emergency signals are surfaced first, with clear direction to local emergency services.</p></article><article><span>02</span><h3>Constraints count</h3><p>Cost, transport, language, and privacy preferences change the recommended route—not just the copy.</p></article><article><span>03</span><h3>Explainable by default</h3><p>Every recommendation shows which inputs shaped it, so users can make their own informed decision.</p></article></div>
+      </section>
+    </main>
+    <footer><span>CarePath prototype · Built for safer decisions, not diagnoses.</span><a href="https://github.com/aditi2100/carepath">View source ↗</a></footer>
+    <script src="app.js"></script>
+  </body>
+</html>
