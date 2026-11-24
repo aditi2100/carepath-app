@@ -15,4 +15,3 @@ CarePath is a safety-first, non-diagnostic care and health-resource navigator. I
 Open `index.html` in a browser. Use **Load sample case** to explore the full path, or select symptoms and constraints manually.
 
 > This is a portfolio prototype, not medical advice. It does not diagnose or replace a qualified professional.
-Safety-first, non-diagnostic care and health-resource navigation platform with explainable urgency guidance and localized resources.
